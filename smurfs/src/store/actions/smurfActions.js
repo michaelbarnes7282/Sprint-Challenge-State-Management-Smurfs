@@ -32,7 +32,7 @@ export const postSmurf = (data) => {
         })
         .then( res => {
             console.log('post', res)
-            dispatch({ type: 'FETCH_SMURF_SUCCESS'})
+            dispatch({ type: 'FETCH_SMURF_SUCCESS', payload: res.data})
         })
         .catch(err => {
             dispatch({
